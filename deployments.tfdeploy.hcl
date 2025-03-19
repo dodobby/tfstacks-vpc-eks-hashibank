@@ -24,7 +24,7 @@ deployment "development" {
     #EKS OIDC
     tfc_kubernetes_audience = "k8s.workload.identity"
     tfc_hostname = "https://app.terraform.io"
-    tfc_organization_name = "hashi-demos-apj"
+    tfc_organization_name = "rum-org-korean-air"
     eks_clusteradmin_arn = "arn:aws:iam::552166050235:role/hjdo-eks-cluster-role-for-stacks"
     eks_clusteradmin_username = "hjdo-developer"
 
@@ -50,9 +50,9 @@ deployment "prod" {
     #EKS OIDC
     tfc_kubernetes_audience = "k8s.workload.identity"
     tfc_hostname = "https://app.terraform.io"
-    tfc_organization_name = "hashi-demos-apj"
+    tfc_organization_name = "rum-org-korean-air"
     eks_clusteradmin_arn = "arn:aws:iam::552166050235:role/hjdo-eks-cluster-role-for-stacks"
-    eks_clusteradmin_username = "aws_simon.lynch_test-developer"
+    eks_clusteradmin_username = "hjdo-producer"
 
     #K8S
     k8s_identity_token = identity_token.k8s.jwt
