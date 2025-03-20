@@ -24,7 +24,7 @@ deployment "development" {
 
     #EKS Cluster
     kubernetes_version = "1.30"
-    cluster_name = "eksdev02"
+    cluster_name = "eks-dev"
     
     #EKS OIDC
     tfc_kubernetes_audience = "k8s.workload.identity"
@@ -50,7 +50,7 @@ deployment "prod" {
 
     #EKS Cluster
     kubernetes_version = "1.30"
-    cluster_name = "eksprod02"
+    cluster_name = "eks-prod"
     
     #EKS OIDC
     tfc_kubernetes_audience = "k8s.workload.identity"
