@@ -48,10 +48,10 @@ provider "aws" "configurations" {
     access_key = var.AWS_ACCESS_KEY_ID
     secret_key = var.AWS_SECRET_ACCESS_KEY
 
-    assume_role_with_web_identity {
-      role_arn                = var.role_arn
-      web_identity_token = var.aws_identity_token
-    }
+    #assume_role_with_web_identity {
+    #  role_arn                = var.role_arn
+    #  web_identity_token = var.aws_identity_token
+    #}
   }
 }
 
