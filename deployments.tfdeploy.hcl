@@ -15,8 +15,8 @@ store "varset" "static_credentials" {
 
 deployment "development" {
   inputs = {
-    AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
+    #AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
+    #AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
     #role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
     regions             = ["ca-central-1"]
     vpc_name = "vpc-dev2"
@@ -42,8 +42,8 @@ deployment "development" {
 
 deployment "prod" {
   inputs = {
-    AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
+    #AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
+    #AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
     #role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
     regions             = ["ca-central-1"]
     vpc_name = "vpc-prod2"
