@@ -6,6 +6,7 @@ variable "aws_identity_token" {
   type = string
   ephemeral = true
   sensitive = true
+  default = ""
 }
 
 variable "k8s_identity_token" {
@@ -30,6 +31,7 @@ variable "aws_auth_roles" {
 
 variable "role_arn" {
   type = string
+  default = ""
 }
 
 variable "vpc_name" {
