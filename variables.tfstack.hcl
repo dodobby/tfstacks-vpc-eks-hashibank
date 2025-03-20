@@ -1,11 +1,14 @@
 variable "AWS_ACCESS_KEY_ID" {
-  type = string
-  default = ""
+  type      = string
+  ephemeral = true
+  default   = ""
 }
 
 variable "AWS_SECRET_ACCESS_KEY" {
-  type = string
-  default = ""
+  type      = string
+  ephemeral = true
+  sensitive = true
+  default   = ""
 }
 
 variable "regions" {
