@@ -110,6 +110,7 @@ component "deploy-hashibank" {
   }
 
   providers = {
+    aws     = provider.aws.configurations[each.value]
     kubernetes  = provider.kubernetes.oidc_configurations[each.value]
     time = provider.time.this
   }
