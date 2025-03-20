@@ -17,7 +17,7 @@ deployment "development" {
   inputs = {
     AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
-    role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
+    #role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
     regions             = ["ca-central-1"]
     vpc_name = "vpc-dev2"
     vpc_cidr = "10.0.0.0/16"
@@ -42,8 +42,9 @@ deployment "development" {
 
 deployment "prod" {
   inputs = {
-    aws_identity_token = identity_token.aws.jwt
-    role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
+    AWS_ACCESS_KEY_ID     = store.varset.static_credentials.AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY = store.varset.static_credentials.AWS_SECRET_ACCESS_KEY
+    #role_arn            = "arn:aws:iam::552166050235:role/stacks-rum-org-korean-air-hjdo-eks"
     regions             = ["ca-central-1"]
     vpc_name = "vpc-prod2"
     vpc_cidr = "10.20.0.0/16"
