@@ -12,7 +12,7 @@ identity_token "k8s" {
 deployment "development" {
   inputs = {
     aws_identity_token = identity_token.aws.jwt
-    role_arn            = "arn:aws:iam::552166050235:oidc-provider/app.terraform.io" #mod
+    role_arn            = "arn:aws:iam::552166050235:role/tf-dynamic-creds-oidc" #mod
     regions             = ["ca-central-1"] #mod
     vpc_name = "vpc-dev2"
     vpc_cidr = "10.0.0.0/16"
